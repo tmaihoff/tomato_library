@@ -1,0 +1,40 @@
+name: Test and Analyze
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Setup java
+        uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+
+      - name: Install and set Flutter version #https://github.com/subosito/flutter-action
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "2.10.0"
+          channel: "stable"
+
+      - name: Pub get
+        run: flutter pub get
+
+      - name: Flutter doctor
+        run: flutter doctor
+
+      - name: Testing main project 
+        run: flutter test test
+
+      - name: Analyzing main project 
+        run: flutter analyze lib
+
+
