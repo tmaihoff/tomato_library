@@ -36,6 +36,7 @@ void main() {
         invertColors: invertColors,
         isAntiAlias: isAntiAlias,
         maskFilter: maskFilter,
+        shader: shader,
         strokeCap: strokeCap,
         strokeJoin: strokeJoin,
         strokeWidth: strokeWidth,
@@ -50,25 +51,11 @@ void main() {
       expect(paint.invertColors, invertColors);
       expect(paint.isAntiAlias, isAntiAlias);
       expect(paint.maskFilter, maskFilter);
+      expect(paint.shader, shader);
       expect(paint.strokeCap, strokeCap);
       expect(paint.strokeJoin, strokeJoin);
       expect(paint.strokeWidth, strokeWidth);
       expect(paint.style, style);
     });
-
-    // BlendMode? blendMode,
-    // Color? color,
-    // ColorFilter? colorFilter,
-    // FilterQuality? filterQuality,
-    // ImageFilter? imageFilter,
-    // bool? invertColors,
-    // bool? isAntiAlias,
-    // MaskFilter? maskFilter,
-    // Shader? shader,
-    // StrokeCap? strokeCap,
-    // StrokeJoin? strokeJoin,
-    // double? strokeMiterLimit,
-    // double? strokeWidth,
-    // PaintingStyle? style,
   });
 }
