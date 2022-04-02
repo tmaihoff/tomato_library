@@ -52,12 +52,13 @@ class ScaledCustomPaint extends StatelessWidget {
                 child: repaintBoundary
                     ? RepaintBoundary(
                         child: CustomPaint(
-                        foregroundPainter: foregroundPainter,
-                        isComplex: isComplex,
-                        willChange: willChange,
-                        painter: painter,
-                        // size: referenceSize,
-                      ))
+                          foregroundPainter: foregroundPainter,
+                          isComplex: isComplex,
+                          willChange: willChange,
+                          painter: painter,
+                          // size: referenceSize,
+                        ),
+                      )
                     : CustomPaint(
                         foregroundPainter: foregroundPainter,
                         isComplex: isComplex,
