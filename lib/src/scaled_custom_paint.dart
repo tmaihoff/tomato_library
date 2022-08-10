@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 /// size aspect ration, the content is aligned by the alignment property.
 class ScaledCustomPaint extends StatelessWidget {
   const ScaledCustomPaint({
-    Key? key,
+    super.key,
     required this.painter,
     this.referenceSize = const Size(200, 200),
     this.alignment = Alignment.center,
@@ -19,7 +19,7 @@ class ScaledCustomPaint extends StatelessWidget {
     this.isComplex = false,
     this.willChange = false,
     this.repaintBoundary = true,
-  }) : super(key: key);
+  });
 
   final CustomPainter painter;
   final CustomPainter? foregroundPainter;
