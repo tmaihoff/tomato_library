@@ -2,7 +2,7 @@ name: tomato_library
 publish_to: none
 
 environment:
-  sdk: ">=2.17.0<3.0.0"
+  sdk: ">=3.0.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -12,6 +12,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lint: ^1.10.0
+  lint: ^2.1.1
 
 flutter:
